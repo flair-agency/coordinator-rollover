@@ -114,6 +114,10 @@ testing, or changing this Skill. Report the handoff location or content, old and
 new resolved task identities when applicable, acknowledgement, repository and
 tracker state, actual checks, limits, remaining human decisions, and recovery.
 
-The manual route is always valid: a human creates a fresh task, supplies the
-handoff and canonical references, records the resolved task ID, and obtains the
-same acknowledgement. Automation is not evidence that the handoff is correct.
+The manual route is available when creation state is known: a human creates a
+fresh task, supplies the handoff and canonical references, records the resolved
+task ID, and obtains the same acknowledgement. If an earlier creation request
+has an uncertain outcome, the human must first establish that no successor was
+created or cancel or otherwise make the uncertain request unable to produce one.
+Until then, do not create another task manually or automatically. Automation is
+not evidence that the handoff is correct.

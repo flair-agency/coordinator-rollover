@@ -36,8 +36,10 @@ not invented and the handoff is not reported as fully reconciled.
 
 The host times out after a creation request and returns no resolved task ID.
 Expected result: do not resubmit blindly. Inspect supported task listings or
-status once to determine whether a task exists; otherwise return a manual route
-and keep the old task.
+status once to determine whether a task exists. If uncertainty remains, keep
+the old task and return a manual recovery route that requires resolving or
+cancelling the uncertain request before any manual or automated replacement is
+created.
 
 ## Acknowledgement refusal
 
