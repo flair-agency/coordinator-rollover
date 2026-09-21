@@ -20,6 +20,15 @@ the conversation statement as conflicting supporting context, names the minimum
 decision, and the successor reports `decision needed`. No implementation begins
 and rollover is not accepted.
 
+## Implemented but not authorized
+
+The current branch contains a working implementation and its focused tests pass,
+but the owning contract assigns that responsibility elsewhere and no attributable
+owner decision changes the boundary. Expected result: record the implementation
+and test result as observed state, keep the contract as decision authority, and
+request the minimum decision needed. Do not treat implementation, test success,
+or merge state as architectural approval.
+
 ## Unattributed dirty worktree
 
 The checkout contains unexplained unstaged changes. Expected result: no reset,

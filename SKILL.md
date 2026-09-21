@@ -32,20 +32,24 @@ staged/unstaged distinction.
 
 ## Reconstruct current state
 
-Check sources in this order:
+Reconstruct three distinct kinds of information:
 
-1. current repository state and readback from the external tracker;
-2. adopted canonical policies, owning contracts, and applicable instructions;
-3. owner decisions whose source can be identified;
-4. actual test, CI, review, release, and operation evidence;
-5. the handoff produced and verified in this run; and
-6. the old conversation and coordinator's own claims as supporting context.
+- **Observed state:** repository and worktree state; PR, review, CI, and test
+  results; tracker readback; release and operation evidence; and external
+  effects with readback.
+- **Decision authority:** adopted canonical policies, owning contracts,
+  applicable instructions, and explicit owner decisions whose source can be
+  identified.
+- **Supporting context:** the handoff produced and verified in this run, the
+  old conversation, and the coordinator's own claims.
 
-Order does not make raw repository state a decision authority. Existing code
-may be an unapproved proposal, and a merge does not prove production behavior.
-When sources conflict, record the observed state, applicable authority, and
-minimum decision needed. Do not silently reconcile the conflict or promote a
-conversation claim into an accepted decision.
+Observed state tells you what is. Decision authority tells you what is allowed.
+Supporting context helps locate and interpret evidence but cannot establish an
+accepted decision by itself. Existing code may be an unapproved proposal, and
+a merge does not prove production behavior. When sources conflict, record the
+observed state, applicable authority, and minimum decision needed. Do not
+silently reconcile the conflict or promote a conversation claim into an
+accepted decision.
 
 Classify every material statement as an accepted decision, observed fact,
 hypothesis, or unresolved item. Verify current Git branch, HEAD, staged,
