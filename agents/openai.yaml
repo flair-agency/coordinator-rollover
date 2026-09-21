@@ -1,0 +1,7 @@
+interface:
+  display_name: "Coordinator Rollover"
+  short_description: "Prepare and verify a fresh coordinator handoff"
+  default_prompt: "Use $coordinator-rollover to prepare an evidence-backed handoff and replace this coordinator."
+
+policy:
+  allow_implicit_invocation: false
